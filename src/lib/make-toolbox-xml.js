@@ -361,6 +361,11 @@ const events = function (isInitialSetup, isStage) {
             <block type="event_whenstageclicked"/>
         ` : `
             <block type="event_whenthisspriteclicked"/>
+            <block type="event_whentouchingobject">
+                <value name="TOUCHINGOBJECTMENU">
+                    <shadow type="sensing_touchingobjectmenu"/>
+                </value>
+            </block>
         `}
         <block type="event_whenbackdropswitchesto">
         </block>
@@ -442,6 +447,10 @@ const control = function (isInitialSetup, isStage) {
             </block>
             <block type="control_delete_this_clone"/>
         `}
+            ${blockSeparator}
+            <block type="control_get_counter"/>
+            <block type="control_incr_counter"/>
+            <block type="control_clear_counter"/>
         ${LazyScratchBlocks.isNameUrMom() ? '<block type="your_mom"/>' : ''}
         ${categorySeparator}
     </category>
@@ -503,6 +512,7 @@ const sensing = function (isInitialSetup, isStage) {
             ${blockSeparator}
         `}
         ${blockSeparator}
+        <block type="sensing_loud"/>
         <block id="loudness" type="sensing_loudness"/>
         ${blockSeparator}
         <block id="timer" type="sensing_timer"/>

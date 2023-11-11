@@ -190,7 +190,7 @@ const menuItems = [
         tags: ['scratch'],
         description: (
             <FormattedMessage
-                defaultMessage="Draw with your sprites."
+                defaultMessage="Draw with your sprites. Warning: Incompatible blocks are also included."
                 description="Description for the 'Pen' extension"
                 id="gui.extension.pen.description"
             />
@@ -236,7 +236,7 @@ const menuItems = [
         tags: ['scratch'],
         description: (
             <FormattedMessage
-                defaultMessage="Make your projects talk."
+                defaultMessage="Make your projects talk.  Warning: Incompatible blocks are also included."
                 description="Description for the Text to speech extension"
                 id="gui.extension.text2speech.description"
             />
@@ -278,7 +278,7 @@ const menuItems = [
         tags: ['scratch'],
         description: (
             <FormattedMessage
-                defaultMessage="Make anything into a key."
+                defaultMessage="Make anything into a key.  Warning: Incompatible blocks are also included."
                 description="Description for the 'Makey Makey' extension"
                 id="gui.extension.makeymakey.description"
             />
