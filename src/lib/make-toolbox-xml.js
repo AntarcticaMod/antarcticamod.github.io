@@ -751,12 +751,12 @@ const notFunctional = function () {
     return `
     <category name="Non Functional" id="notFunctional" colour="#FFFFFF" secondaryColour="#000000">
         <block type="motion_align_scene"/>
-        ${blockSeparator}
+        
         <block type="motion_xscroll"/>
         <block type="motion_yscroll"/>
-        ${blockSeparator}
+        
         <block type="looks_hideallsprites"/>
-        ${blockSeparator}
+        
         <block type="sensing_userid"/>
         ${categorySeparator}
     </category>
@@ -768,16 +768,16 @@ const menusCategory = function () {
     <category name="Menus" id="menusCategory" colour="#FFFFFF" secondaryColour="#000000">
         <block type="motion_goto_menu"/>
         <block type="motion_pointtowards_menu"/>
-        ${blockSeparator}
+        
         <block type="looks_costume"/>
         <block type="looks_backdrops"/>
-        ${blockSeparator}
+        
         <block type="sound_sounds_menu"/>
-        ${blockSeparator}
+        
         <block type="event_touchingobjectmenu"/>
-        ${blockSeparator}
+        
         <block type="control_create_clone_of_menu"/>
-        ${blockSeparator}
+        
         <block type="sensing_touchingobjectmenu"/>
         <block type="sensing_keyoptions"/>
         ${categorySeparator}
