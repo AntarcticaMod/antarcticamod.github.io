@@ -723,18 +723,6 @@ const operators = function (isInitialSetup) {
     `;
 };
 
-const notFunctional = function () {
-    return `
-    <category name="Non-Functional" id="notFunctional" colour="#000000" secondaryColour="#000000">
-        <block type="motion_align_scene"/>
-        ${blockSeparator}
-        <block type="motion_xscroll"/>
-        <block type="motion_yscroll"/>
-        ${categorySeparator}
-    </category>
-    `;
-};
-
 const variables = function () {
     return `
     <category
@@ -755,6 +743,44 @@ const myBlocks = function () {
         colour="#FF6680"
         secondaryColour="#FF4D6A"
         custom="PROCEDURE">
+    </category>
+    `;
+};
+
+const notFunctional = function () {
+    return `
+    <category name="Non Functional" id="notFunctional" colour="#FFFFFF" secondaryColour="#000000">
+        <block type="motion_align_scene"/>
+        ${blockSeparator}
+        <block type="motion_xscroll"/>
+        <block type="motion_yscroll"/>
+        ${blockSeparator}
+        <block type="looks_hideallsprites"/>
+        ${blockSeparator}
+        <block type="sensing_userid"/>
+        ${categorySeparator}
+    </category>
+    `;
+};
+
+const menusCategory = function () {
+    return `
+    <category name="Menus" id="menusCategory" colour="#FFFFFF" secondaryColour="#000000">
+        <block type="motion_goto_menu"/>
+        <block type="motion_pointtowards_menu"/>
+        ${blockSeparator}
+        <block type="looks_costume"/>
+        <block type="looks_backdrops"/>
+        ${blockSeparator}
+        <block type="sound_sounds_menu"/>
+        ${blockSeparator}
+        <block type="event_touchingobjectmenu"/>
+        ${blockSeparator}
+        <block type="control_create_clone_of_menu"/>
+        ${blockSeparator}
+        <block type="sensing_touchingobjectmenu"/>
+        <block type="sensing_keyoptions"/>
+        ${categorySeparator}
     </category>
     `;
 };
@@ -814,9 +840,10 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
     const controlXML = moveCategory('control') || control(isInitialSetup, isStage, targetId);
     const sensingXML = moveCategory('sensing') || sensing(isInitialSetup, isStage, targetId);
     const operatorsXML = moveCategory('operators') || operators(isInitialSetup, isStage, targetId);
-    const nofunctionXML = moveCategory('nonworking') || notFunctional(isInitialSetup, isStage, targetId);
     const variablesXML = moveCategory('data') || variables(isInitialSetup, isStage, targetId);
     const myBlocksXML = moveCategory('procedures') || myBlocks(isInitialSetup, isStage, targetId);
+    const menusXML = moveCategory('menus') || menusCategory(isInitialSetup, isStage, targetId);
+    const nofunctionXML = moveCategory('nonworking') || notFunctional(isInitialSetup, isStage, targetId);
     const liveTestsXML = moveCategory('liveTests') || liveTests(isLiveTest);
 
     const everything = [
@@ -828,9 +855,10 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
         controlXML, gap,
         sensingXML, gap,
         operatorsXML, gap,
-        nofunctionXML, gap,
         variablesXML, gap,
         myBlocksXML, gap,
+        menusXML, gap,
+        nofunctionXML, gap,
         isLiveTest ? [liveTestsXML, gap] : ''
     ];
 
