@@ -878,14 +878,6 @@ class MenuBar extends React.Component {
                         ) : []))}
                     </div>
                     <div className={styles.menuBarItem}>
-                        {this.props.isShowingProject && this.props.canEditTitle ?
-                            (<ShareButton
-                                className={styles.menuBarButton}
-                                isShared={this.props.isShared}
-                            />)
-                            : (null)}
-                    </div>
-                    <div className={styles.menuBarItem}>
                         <a
                             className={styles.feedbackLink}
                             href="https://penguinmod.com"
