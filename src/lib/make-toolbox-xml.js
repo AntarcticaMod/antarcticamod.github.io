@@ -230,7 +230,6 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
                 </value>
             </block>
             <block type="looks_nextcostume"/>
-            ${blockSeparator}
             <block type="looks_switchbackdropto">
                 <value name="BACKDROP">
                     <shadow type="looks_backdrops">
@@ -357,7 +356,6 @@ const events = function (isInitialSetup, isStage) {
     return `
     <category name="%{BKY_CATEGORY_EVENTS}" id="events" colour="#FFD500" secondaryColour="#CC9900">
         <block type="event_whenflagclicked"/>
-        ${blockSeparator}
         <block type="event_whenkeypressed"></block>
         ${isStage ? `
             <block type="event_whenstageclicked"/>
@@ -434,6 +432,7 @@ const control = function (isInitialSetup, isStage) {
                 <value name="CLONE_OPTION">
                     <shadow type="control_create_clone_of_menu"/>
                 </value>
+            </block>
         ` : `
             <block type="control_start_as_clone"/>
             <block type="control_create_clone_of">
@@ -472,7 +471,6 @@ const sensing = function (isInitialSetup, isStage) {
                     <shadow type="colour_picker"/>
                 </value>
             </block>
-            ${blockSeparator}
             <block type="sensing_distanceto">
                 <value name="DISTANCETOMENU">
                     <shadow type="sensing_distancetomenu"/>
@@ -496,9 +494,7 @@ const sensing = function (isInitialSetup, isStage) {
                 <shadow type="sensing_keyoptions"/>
             </value>
         </block>
-        ${blockSeparator}
         <block type="sensing_mousedown"/>
-        <block type="sensing_mouseclicked"/>
         <block type="sensing_mousex"/>
         <block type="sensing_mousey"/>
         ${isStage ? '' : `
@@ -509,8 +505,8 @@ const sensing = function (isInitialSetup, isStage) {
         ${blockSeparator}
         <block id="loudness" type="sensing_loudness"/>
         ${blockSeparator}
-        <block type="sensing_resettimer"/>
         <block id="timer" type="sensing_timer"/>
+        <block type="sensing_resettimer"/>
         ${blockSeparator}
         <block id="of" type="sensing_of">
             <value name="OBJECT">
@@ -651,7 +647,6 @@ const operators = function (isInitialSetup) {
                     </shadow>
                 </value>
             </block>
-            ${blockSeparator}
             <block type="operator_letter_of">
                 <value name="LETTER">
                     <shadow type="math_whole_number">
