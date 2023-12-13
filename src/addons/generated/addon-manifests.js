@@ -74,7 +74,6 @@ export default {
   "middle-click-popup": _middle_click_popup,
   "jump-to-def": _jump_to_def,
   "editor-searchable-dropdowns": _editor_searchable_dropdowns,
-  "data-category-tweaks-v2": _data_category_tweaks_v2,
   "block-palette-icons": _block_palette_icons,
   "hide-flyout": _hide_flyout,
   "mediarecorder": _mediarecorder,
