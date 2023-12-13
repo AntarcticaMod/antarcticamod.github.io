@@ -148,6 +148,8 @@ import pmOperatorsExpansionExtensionIcon from './penguinmod/extensions/operators
 // gsa: ololololololo
 import defaultExtensionIcon from './penguinmod/extensions/placeholder.png';
 
+import coreExIconURL from './coreex/coreex.png';
+
 const urlParams = new URLSearchParams(location.search);
 
 const IsLocal = String(window.location.href).startsWith(`http://localhost:`);
@@ -445,6 +447,26 @@ const menuItems = [
             />
         ),
         helpLink: 'https://scratch.mit.edu/vernier'
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="CoreExample"
+                description="Name for the 'CoreExample' extension"
+                id="gui.extension.coreex.name"
+            />
+        ),
+        extensionId: 'coreExample',
+        iconURL: coreExIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="test blocks, hidden in scratch's code."
+                description="Description for the 'CoreExample' extension"
+                id="gui.extension.coreex.description"
+            />
+        ),
+        tags: ['tw'],
+        featured: true
     },
     {
         name: (
